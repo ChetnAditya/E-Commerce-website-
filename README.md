@@ -19,6 +19,10 @@ The APIs are well-documented and easily accessible through Swagger UI, making it
 - Price & discount
 -Orders
 
+# ER Diagram :-
+![WhatsApp Image 2024-11-13 at 22 57 40_e98287e5](https://github.com/user-attachments/assets/39b42df3-031f-4c56-89fb-32366ea58704)
+
+
 
 # User:-
 - Registration & Login
