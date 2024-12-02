@@ -1,0 +1,45 @@
+/* Navbar Customizations */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar {
+    box-shadow: 0 4px 8px rgba(28, 24, 24, 0.1);
+}
+
+/* Hero Section */
+.jumbotron {
+    background-color: #11427499;
+    border-radius: 8px;
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    font-size: 14px;
+    line-height: 1.8;
+}
+footer a {
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+.error-message {
+    font-size: 12px;
+}
