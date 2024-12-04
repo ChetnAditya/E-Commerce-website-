@@ -3,6 +3,9 @@ The E-Commerce Application is built using Java and Spring Boot, with security, s
 
 The APIs are well-documented and easily accessible through Swagger UI, making it simple for developers to test and understand the various endpoints. Overall, this project provides secure Rest APIs to create a scalable platform for businesses to sell their products to customers.
 
+### Frontend and User Login
+![Screenshot_2024-12-04_000529 1](https://github.com/user-attachments/assets/ced810a4-b4f8-4eb8-946b-69dd832773b9)
+
 ### Setup
 1. Create a MySQL database named `ecommerce_db`.
 2. Update `db.properties` in `resources` with your database credentials.
@@ -30,6 +33,9 @@ The APIs are well-documented and easily accessible through Swagger UI, making it
 - Adding & deleting products to cart
 - Managing address and products quantity
 - Ordering products and fetching order status
+
+![Screenshot 2024-12-04 095028](https://github.com/user-attachments/assets/4a4fd340-3212-4939-bd65-3be94a1ce73f)
+
 
 
 ## Security
