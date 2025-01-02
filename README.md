@@ -4,6 +4,7 @@ The E-Commerce Application is built using Java and Spring Boot, with security, s
 The APIs are well-documented and easily accessible through Swagger UI, making it simple for developers to test and understand the various endpoints. Overall, this project provides secure Rest APIs to create a scalable platform for businesses to sell their products to customers.
 
 ### Frontend and User Login
+
 ![Screenshot_2024-12-04_000529 1](https://github.com/user-attachments/assets/ced810a4-b4f8-4eb8-946b-69dd832773b9)
 
 ### Setup
@@ -23,11 +24,13 @@ The APIs are well-documented and easily accessible through Swagger UI, making it
 -Orders
 
 # ER Diagram :-
+
 ![WhatsApp Image 2024-11-13 at 22 57 40_e98287e5](https://github.com/user-attachments/assets/39b42df3-031f-4c56-89fb-32366ea58704)
 
 
 
 # User:-
+
 - Registration & Login
 - Fetch categories and products based on category
 - Adding & deleting products to cart
