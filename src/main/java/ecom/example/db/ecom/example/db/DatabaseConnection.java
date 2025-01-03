@@ -1,4 +1,4 @@
-package ecom.example.db;
+package ecom.example.db.ecom.example.db;
 
 import java.io.InputStream;
 import java.sql.Connection;
