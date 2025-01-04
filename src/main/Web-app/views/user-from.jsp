@@ -1,4 +1,3 @@
-user-form.jsp
 
 <!DOCTYPE html>
 <html>
