@@ -1,8 +1,20 @@
+<web-app xmlns="http://127.0.0.1:3000/E-Commerce%20Website/index.html" version="3.0">
+    <display-name>E-Commerce Web Application</display-name>
 
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+    <!-- Define the controller servlet -->
+    <servlet>
+        <servlet-name>ProductController</servlet-name>
+        <servlet-class>com.example.ecommerce.controller.ProductController</servlet-class>
+    </servlet>
 
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
+    <servlet-mapping>
+        <servlet-name>ProductController</servlet-name>
+        <url-pattern>/products</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome file -->
+    <welcome-file-list>
+        <welcome-file>pages/productList.jsp</welcome-file>
+    </welcome-file-list>
 </web-app>
+
