@@ -33,6 +33,21 @@
 			<version>8.4.0</version>
 		</dependency>
 
+		<!-- JSTL Dependency -->
+                <dependency>
+			<groupId>javax.servlet</groupId>
+                        <artifactId>jstl</artifactId>
+                        <version>1.2</version>
+                </dependency>
+
+                <!-- Servlet API (if not already added) -->
+                <dependency>
+			<groupId>javax.servlet</groupId>
+                        <artifactId>javax.servlet-api</artifactId>
+                        <version>4.0.1</version>
+                        <scope>provided</scope>
+               </dependency>
+
 	</dependencies>
 	<build>
 		<finalName>user-web-app</finalName>
