@@ -65,5 +65,5 @@ The API is secured using JSON Web Tokens (JWT) handled by Auth0. To access the A
 - Update the values in application.properties with your MySQL database connection details.
 - Run the app: Right-click the project in the Package Explorer and click Run As > Spring Boot App.
 
-## here is the full work report of this project:-
+## here is the project documentation of this project:-
 [ecommercewebsitereport.pdf](https://github.com/user-attachments/files/18309585/ecommercewebsitereport.pdf)
