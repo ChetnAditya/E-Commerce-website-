@@ -1,30 +1,38 @@
 package ecom.example.db.ecom.example.db;
 
-import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.util.Properties;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class DatabaseConnection {
+    public static void main(String[] args) {
+        
+        String url = "jdbc:mysql://localhost:3306/ecommerce";
+        String username = "root"; 
+        String password = "Arjun@8011";
 
-    public static Connection getConnection() throws SQLException {
-        Connection connection = null;
-        try (InputStream input = DatabaseConnection.class.getClassLoader().getResourceAsStream("db.properties")) {
-            Properties props = new Properties();
-            if (input == null) {
-                System.out.println("Sorry, unable to find db.properties");
-                return null;
+        try {
+            
+            Connection connection = DriverManager.getConnection(url, username, password);
+            System.out.println("Database connected successfully!");
+
+            
+            String query = "SELECT * FROM users";
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+
+          
+            while (resultSet.next()) {
+                System.out.println("ID: " + resultSet.getInt("id"));
+                System.out.println("Name: " + resultSet.getString("name"));
+                System.out.println("Email: " + resultSet.getString("email"));
             }
-            props.load(input);
-            String url = props.getProperty("db.url");
-            String user = props.getProperty("db.user");
-            String password = props.getProperty("db.password");
 
-            connection = DriverManager.getConnection(url, user, password);
+       
+            connection.close();
         } catch (Exception e) {
             e.printStackTrace();
-        }
-        return connection;
-    }
-}
+        }
+    }
+
