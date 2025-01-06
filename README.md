@@ -7,7 +7,7 @@ Tech : HTML & CSS
 
 ### Demo Video
 
-[https://github.com/ChetnAditya/E-Commerce-website-/blob/main/demo.mp4](https://drive.google.com/drive/home)
+https://drive.google.com/file/d/18UVlrKqqAC74TF0j2i6LHuiXTwXfEZcr/view?t=15
 
 ### Screenshots 
 
