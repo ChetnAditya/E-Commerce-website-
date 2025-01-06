@@ -1,5 +1,6 @@
 -- Database: ecommerce
-
+create DATABASE ecommerce;
+use ecommerce ;
 -- Users Table
 CREATE TABLE users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
