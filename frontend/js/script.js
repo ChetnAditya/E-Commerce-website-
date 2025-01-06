@@ -40,30 +40,77 @@ style.textContent = `
 }`;
 document.head.appendChild(style);
 
+document.getElementById("checkout-form").addEventListener("submit", (event) => {
+    event.preventDefault();
 
+    const formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        address: document.getElementById("address").value,
+    };
 
-// Register Form Validation
-document.getElementById('registerForm')?.addEventListener('submit', function (e) {
-    const username = document.getElementById('username').value.trim();
-    const password = document.getElementById('password').value.trim();
+    // Here, you can send the data to the backend
+    console.log("Checkout data:", formData);
 
-    if (username.length < 3) {
-        alert("Username must be at least 3 characters long.");
-        e.preventDefault();
-    }
-    if (password.length < 6) {
-        alert("Password must be at least 6 characters long.");
-        e.preventDefault();
-    }
+    // Clear cart after checkout
+    localStorage.removeItem("cart");
+    alert("Payment successful! Thank you for your order.");
+    window.location.href = "index.html";
 });
 
-// Login Form Validation
-document.getElementById('loginForm')?.addEventListener('submit', function (e) {
-    const username = document.getElementById('username').value.trim();
-    const password = document.getElementById('password').value.trim();
+const express = require("express");
+const bodyParser = require("body-parser");
 
-    if (!username || !password) {
-        alert("Both fields are required.");
-        e.preventDefault();
-    }
+const app = express();
+app.use(bodyParser.json());
+
+// Endpoint to handle checkout
+app.post("/checkout", (req, res) => {
+    const { name, email, address } = req.body;
+
+    // Simulate payment processing (e.g., integrate Stripe or PayPal here)
+    console.log(`Processing payment for ${name} (${email}) at ${address}`);
+    
+    res.json({ success: true, message: "Payment processed successfully!" });
+});
+
+app.listen(3000, () => {
+    console.log("Server running on http://localhost:3000");
+});
+
+
+// Mock user details
+const user = {
+    name: "John Doe",
+    email: "john.doe@example.com",
+    orders: [
+        { id: 1, date: "2025-01-01", total: "$120" },
+        { id: 2, date: "2025-01-02", total: "$80" },
+    ]
+};
+
+// Populate user details
+document.getElementById("user-name").textContent = user.name;
+document.getElementById("user-email").textContent = user.email;
+
+// Populate order history
+const orderList = document.getElementById("order-list");
+user.orders.forEach(order => {
+    const li = document.createElement("li");
+    li.textContent = `Order #${order.id} - ${order.date} - Total: ${order.total}`;
+    orderList.appendChild(li);
+});
+
+// Edit account details
+document.getElementById("edit-account").addEventListener("click", () => {
+    const newName = prompt("Enter your new name:", user.name);
+    const newEmail = prompt("Enter your new email:", user.email);
+    if (newName) user.name = newName;
+    if (newEmail) user.email = newEmail;
+
+    // Update UI
+    document.getElementById("user-name").textContent = user.name;
+    document.getElementById("user-email").textContent = user.email;
+
+    alert("Account details updated successfully!");
 });
