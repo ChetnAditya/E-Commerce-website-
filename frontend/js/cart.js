@@ -18,3 +18,24 @@ function displayCartItems() {
 }
 
 displayCartItems();
+
+
+document.getElementById("checkout-form").addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const formData = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      address: document.getElementById("address").value,
+  };
+
+  // Here, you can send the data to the backend
+  console.log("Checkout data:", formData);
+
+  // Clear cart after checkout
+  localStorage.removeItem("cart");
+  alert("Payment successful! Thank you for your order.");
+  window.location.href = "index.html";
+});
+
+
