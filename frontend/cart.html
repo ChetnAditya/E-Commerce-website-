@@ -1,32 +1,172 @@
-<<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<html>
-<head>
-    <title>User Profile</title>
-</head>
-<body>
-    <h2>User Profile</h2>
-    
-    <!-- Display user information -->
-    <form action="updateProfile" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" value="${user.username}" readonly><br><br>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="\style.css" />
+    <title>Cart - Exclusive E-Commerce Website</title>
+  </head>
+  <body>
+    <div class="top_nav">
+      <div class="container top_nav_container">
+        <div class="top_nav_wrapper">
+          <p class="tap_nav_p">
+            Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+          </p>
+          <a href="shop.html" class="top_nav_link">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav">
+      <div class="container nav_container">
+        <a href="#" class="nav_logo">EXCLUSIVE</a>
+        <ul class="nav_list">
+          <li class="nav_item"><a href="home.html" class="nav_link">Home</a></li>
+          <li class="nav_item"><a href="about.html" class="nav_link">About</a></li>
+          <li class="nav_item"><a href="contact.html" class="nav_link">Contact</a></li>
+          <li class="nav_item">
+            <a href="./sign-up.html" class="nav_link">Sign up</a>
+          </li>
+          <li class="nav_item"><a href="login.html" class="nav_link">log out</a></li>
+          <li class="nav_item"><a href="my-account.html" class="nav_link">My Account</a></li>
+        </ul>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" value="${user.password}" required><br><br>
+        <div class="nav_items">
+          <form action="#" class="nav_form">
+            <input type="text" class="nav_input" placeholder="search here..." />
+            <img src="search.png.png" alt="" class="nav_search" />
+          </form>
+          <img src="heart.png.png" alt="" class="nav_heart" />
+          <a href="cart.html">
+          <img src="cart.png.png" alt="" class="nav_cart" />
+          </a>
+        </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="${user.email}" required><br><br>
+        <span class="hamburger">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </span>
+      </div>
+    </nav>
+    <nav class="mobile_nav mobile_nav_hide">
+      <ul class="mobile_nav_list">
+        <li class="mobile_nav_item">
+          <a href="index.html" class="mobile_nav_link">Home</a>
+        </li>
+        <li class="mobile_nav_item">
+          <a href="about.html" class="mobile_nav_link">About</a>
+        </li>
+        <li class="mobile_nav_item">
+          <a href="contact.html" class="mobile_nav_link">Contact</a>
+        </li>
+        <li class="mobile_nav_item">
+          <a href="/sign-up.html" class="mobile_nav_link">Sign Up</a>
+        </li>
+        <li class="mobile_nav_item">
+          <a href="\cart.html" class="mobile_nav_link">Cart</a>
+        </li>
+        <li class="mobile_nav_item">
+            <a href="login.html" class="mobile_nav_link">log out</a>
+      </ul>
+    </nav>
 
-        <label for="phone">Phone:</label>
-        <input type="text" id="phone" name="phone" value="${user.phone}" required><br><br>
+    <section class="section">
+      <div class="container">
+        <div class="cart">
+          <div class="cart_header">
+            <p class="cart_header_id">Product title </p>
+            <p class="cart_header_id">Product image </p>
+            <p class="cart_header_title">Price</p>
+            <p class="cart_header_image">Quantity</p>
+            <p class="cart_header_price">SubTotal</p>
+            
+          </div>
+          <div class="cart-item">
+            <div class="cart_product" >
+              <span class ="cart_item_title">SAMSUNG Galaxy S24Ultra 5G(Titanium Black, 12 GB, 256GB)</span>
+              <img src="samsung_s24 ultra.jpg" alt="" class = "cart_img " />
+             
+            </div>
+            <div class="cart_item_price" >$100</div>
+            <input type="number" class = "cart_item_qty" />
+            <p class="cart_item_subtotal">$100</p>
+          </div>
+          <div class="cart-item">
+            <div class="cart_product" >
+              <span class ="cart_item_title">SAMSUNG Galaxy S24Ultra 5G(Titanium Black, 12 GB, 256GB)</span>
+              <img src="vivo v40.jpg" alt="" class = "cart_img " />
+             
+            </div>
+            <div class="cart_item_price" >$120</div>
+            <input type="number" class = "cart_item_qty" />
+            <p class="cart_item_subtotal">$120</p>
+          </div>    
+        </div>
+      </div>
+    </section>
 
-        <button type="submit">Update Profile</button>
-    </form>
+    <footer class="footer">
+      <div class="container footer_container">
+        <div class="footer_item">
+          <a href="#" class="footer_logo">Exclusive</a>
+          <div class="footer_p">Subscribe and connect with me
+          </div>
+        </div>
+        <div class="footer_item">
+          <h3 class="footer_item_titl">Support</h3>
+          <ul class="footer_list">
+            <li class="li footer_list_item">Dankaur ,Greater Noida, Gautam Buddha Nagar</li>
+            <li class="li footer_list_item">aksir648@gmail.com</li>
+            <li class="li footer_list_item">+91 123 456 7890</li>
+            <li class="li footer_list_item">+91 272 345 6798</li>
+          </ul>
+        </div>
+        <div class="footer_item">
+          <h3 class="footer_item_titl">Account</h3>
+          <ul class="footer_list">
+            <li class="li footer_list_item">My Account</li>
+            <li href="login.html" class="li footer_list_item">Login / Sign-up</li>
+            <li href="cart.html" class="li footer_list_item">Cart</li>
+            <li href="shop.html" class="li footer_list_item">Shop</li>
+          </ul>
+        </div>
+        <div class="footer_item">
+          <h3 class="footer_item_titl">Quick links</h3>
+          <ul class="footer_list">
+            <li class="li footer_list_item">Privacy policy</li>
+            <li class="li footer_list_item">Terms of use</li>
+            <li class="li footer_list_item">FAQ's</li>
+            <li href="contact.html" class="li footer_list_item">Contact</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 text-center">
+        <h5>Follow Us On</h5>
+        <a href="https://www.facebook.com/profile.php?id=100036351616908&mibextid=ZbWKwL" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="https://www.facebook.com/share/14q3wtm1cc/" height="30" width="40" /></a>
+        <a href="https://instagram.com/arjun_m0368" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="arjun_m0368" height="30" width="40" /></a>
+        <a href="https://linkedin.com/in/arjun-kumar-5098b6247" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="arjun-kumar-5098b6247" height="30" width="40" /></a>
+        <a href="http://www.youtube.com/@Creation_Hub-k1p" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="arjun's creation hub" height="30" width="40" /></a>
+      </div>
 
-    <p>
-        <a href="dashboard.jsp">Back to Dashboard</a>
-    </p>
-</body>
+      <div class="footer_bottom">
+        <div class="container footer_bottom_container">
+          <p class="footer_copy">
+            Copyright Exclusive 2023. All right reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="\app.js"></script>
+  </body>
 </html>
-
