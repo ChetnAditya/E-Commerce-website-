@@ -1,19 +1,25 @@
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2030 15:37:25").getTime();
+var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
 
 // Update the count down every 1 second
-var x = setInterval(function() {
+var x = setInterval(function () {
+  // Get today's date and time
   var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
   var distance = countDownDate - now;
 
+  // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML =
+    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
+  // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "EXPIRED";
@@ -43,6 +49,7 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
+// Animations
 ScrollReveal().reveal(".top_nav", {
   origin: "bottom",
   distance: "20px",
@@ -54,6 +61,7 @@ ScrollReveal().reveal(".nav", {
   opacity: 0,
   delay: 100,
 });
+
 ScrollReveal().reveal(".header", {
   origin: "bottom",
   distance: "20px",
@@ -75,17 +83,17 @@ ScrollReveal().reveal(".footer", {
   delay: 100,
 });
 
+// mobile nav
 const hamburger = document.querySelector(".hamburger");
 const Nav = document.querySelector(".mobile_nav");
 
-hamburger.addEventListener("click", (event) => {
-  event.stopPropagation();
+hamburger.addEventListener("click", () => {
   Nav.classList.toggle("mobile_nav_hide");
 });
 
-const addToCartButtons = document.querySelectorAll(".add_to_cart");
+const AddToCart = document.querySelectorAll(".add_to_cart");
 
-addToCartButtons.forEach((button) => {
+AddToCart.forEach((button) => {
   button.addEventListener("click", () => {
     const id = button.getAttribute("data-id");
     const title = button.getAttribute("data-title");
@@ -93,20 +101,8 @@ addToCartButtons.forEach((button) => {
     const price = button.getAttribute("data-price");
 
     const cartItem = { id, title, image, price };
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    const exists = cart.some(item => item.id === id);
-    if (!exists) {
-      cart.push(cartItem);
-      localStorage.setItem("cart", JSON.stringify(cart));
-    } else {
-      alert("This item is already in the cart!");
-    }
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(cartItem);
+    localStorage.setItem("cart", JSON.stringify(cart));
   });
 });
-
-
-
-
-
-
