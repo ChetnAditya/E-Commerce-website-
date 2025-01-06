@@ -14,7 +14,7 @@
           <p class="tap_nav_p">
             Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
           </p>
-          <a href="#" class="top_nav_link">SHOP NOW</a>
+          <a href="shop.html" class="top_nav_link">SHOP NOW</a>
         </div>
       </div>
     </div>
@@ -22,26 +22,25 @@
       <div class="container nav_container">
         <a href="#" class="nav_logo">EXCLUSIVE</a>
         <ul class="nav_list">
-          <li class="nav_item"><a href="/" class="nav_link">Home</a></li>
-          <li class="nav_item"><a href="#" class="nav_link">About</a></li>
-          <li class="nav_item"><a href="#" class="nav_link">Contact</a></li>
+          <li class="nav_item"><a href="home.html" class="nav_link">Home</a></li>
+          <li class="nav_item"><a href="about.html" class="nav_link">About</a></li>
+          <li class="nav_item"><a href="contact.html" class="nav_link">Contact</a></li>
           <li class="nav_item">
             <a href="./sign-up.html" class="nav_link">Sign up</a>
           </li>
+          <li class="nav_item"><a href="login.html" class="nav_link">log out</a></li>
         </ul>
         <div class="nav_items">
           <form action="#" class="nav_form">
-            <input
-              type="text"
-              class="nav_input"
-              placeholder="search here...." />
-            <img src="./image/search.png" alt="" class="nav_search" />
+            <input type="text" class="nav_input" placeholder="search here..." />
+            <img src="search.png.png" alt="" class="nav_search" />
           </form>
-          <img src="./image/heart.png" alt="" class="nav_heart" />
-          <a href="\cart.html">
-            <img src="./image/cart.png" alt="" class="nav_cart" />
+          <img src="heart.png.png" alt="" class="nav_heart" />
+          <a href="cart.html">
+          <img src="cart.png.png" alt="" class="nav_cart" />
           </a>
         </div>
+
         <span class="hamburger">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +60,7 @@
     <nav class="mobile_nav mobile_nav_hide">
       <ul class="mobile_nav_list">
         <li class="mobile_nav_item">
-          <a href="/" class="mobile_nav_link">Home</a>
+          <a href="index.html" class="mobile_nav_link">Home</a>
         </li>
         <li class="mobile_nav_item">
           <a href="about.html" class="mobile_nav_link">About</a>
@@ -70,11 +69,13 @@
           <a href="contact.html" class="mobile_nav_link">Contact</a>
         </li>
         <li class="mobile_nav_item">
-          <a href="./sign-up.html" class="mobile_nav_link">Sign Up</a>
+          <a href="/sign-up.html" class="mobile_nav_link">Sign Up</a>
         </li>
         <li class="mobile_nav_item">
-          <a href="/cart.html" class="mobile_nav_link">Cart</a>
+          <a href="\cart.html" class="mobile_nav_link">Cart</a>
         </li>
+        <li class="mobile_nav_item">
+            <a href="login.html" class="mobile_nav_link">log out</a>
       </ul>
     </nav>
 
@@ -99,8 +100,16 @@
             <input type="number" class = "cart_item_qty" />
             <p class="cart_item_subtotal">$100</p>
           </div>
-
-          
+          <div class="cart-item">
+            <div class="cart_product" >
+              <span class ="cart_item_title">SAMSUNG Galaxy S24Ultra 5G(Titanium Black, 12 GB, 256GB)</span>
+              <img src="vivo v40.jpg" alt="" class = "cart_img " />
+             
+            </div>
+            <div class="cart_item_price" >$120</div>
+            <input type="number" class = "cart_item_qty" />
+            <p class="cart_item_subtotal">$120</p>
+          </div>    
         </div>
       </div>
     </section>
@@ -109,9 +118,7 @@
       <div class="container footer_container">
         <div class="footer_item">
           <a href="#" class="footer_logo">Exclusive</a>
-          <div class="footer_p">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Exercitationem fuga harum voluptate?
+          <div class="footer_p">Subscribe and connect with me
           </div>
         </div>
         <div class="footer_item">
@@ -127,9 +134,9 @@
           <h3 class="footer_item_titl">Account</h3>
           <ul class="footer_list">
             <li class="li footer_list_item">My Account</li>
-            <li class="li footer_list_item">Login / Register</li>
-            <li class="li footer_list_item">Cart</li>
-            <li class="li footer_list_item">Shop</li>
+            <li href="login.html" class="li footer_list_item">Login / Sign-up</li>
+            <li href="cart.html" class="li footer_list_item">Cart</li>
+            <li href="shop.html" class="li footer_list_item">Shop</li>
           </ul>
         </div>
         <div class="footer_item">
@@ -138,7 +145,7 @@
             <li class="li footer_list_item">Privacy policy</li>
             <li class="li footer_list_item">Terms of use</li>
             <li class="li footer_list_item">FAQ's</li>
-            <li class="li footer_list_item">Contact</li>
+            <li href="contact.html" class="li footer_list_item">Contact</li>
           </ul>
         </div>
       </div>
